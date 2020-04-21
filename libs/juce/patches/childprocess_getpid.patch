@@ -11,9 +11,9 @@ index ea007b1..f6faa5b 100644
 +        return childPID;
 +    }
 +
-     int childPID;
- 
- private:
+     int childPID = 0;
+     int pipeHandle = 0;
+     int exitCode = -1;
 diff --git a/modules/juce_core/native/juce_win32_Threads.cpp b/modules/juce_core/native/juce_win32_Threads.cpp
 index 68d891f..d38b733 100644
 --- a/modules/juce_core/native/juce_win32_Threads.cpp
