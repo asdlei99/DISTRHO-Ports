@@ -1,10 +1,10 @@
 diff --git a/modules/juce_core/native/juce_posix_SharedCode.h b/modules/juce_core/native/juce_posix_SharedCode.h
-index f6faa5b..0a5d97e 100644
+index 1fc1f00b7..2b0e16844 100644
 --- a/modules/juce_core/native/juce_posix_SharedCode.h
 +++ b/modules/juce_core/native/juce_posix_SharedCode.h
-@@ -647,12 +647,39 @@ File juce_getExecutableFile()
+@@ -590,12 +590,39 @@ File juce_getExecutableFile()
  
-             void* localSymbol = (void*) juce_getExecutableFile;
+             auto localSymbol = (void*) juce_getExecutableFile;
              dladdr (localSymbol, &exeInfo);
 -            return CharPointer_UTF8 (exeInfo.dli_fname);
 +
@@ -41,6 +41,6 @@ index f6faa5b..0a5d97e 100644
      static String filename = DLAddrReader::getFilename();
 -    return File::getCurrentWorkingDirectory().getChildFile (filename);
 +    return filename;
-    #endif
  }
  
+ //==============================================================================

@@ -1,8 +1,8 @@
 diff --git a/modules/juce_events/messages/juce_MessageManager.h b/modules/juce_events/messages/juce_MessageManager.h
-index e0734f8..cc8d44d 100644
+index 22b2d1895..e94d0ce5a 100644
 --- a/modules/juce_events/messages/juce_MessageManager.h
 +++ b/modules/juce_events/messages/juce_MessageManager.h
-@@ -189,6 +189,7 @@ public:
+@@ -316,6 +316,7 @@ public:
      // Internal methods - do not use!
      void deliverBroadcastMessage (const String&);
      ~MessageManager() noexcept;
@@ -10,11 +10,11 @@ index e0734f8..cc8d44d 100644
     #endif
  
  private:
-@@ -212,7 +213,6 @@ private:
+@@ -338,7 +339,6 @@ private:
      static void* exitModalLoopCallback (void*);
      static void doPlatformSpecificInitialisation();
      static void doPlatformSpecificShutdown();
 -    static bool dispatchNextMessageOnSystemQueue (bool returnIfNoPendingMessages);
  
-     template <typename FunctionType>
-     struct AsyncCallInvoker  : public MessageBase
+     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MessageManager)
+ };

@@ -1,8 +1,8 @@
 diff --git a/modules/juce_audio_processors/format_types/juce_VSTPluginFormat.cpp b/modules/juce_audio_processors/format_types/juce_VSTPluginFormat.cpp
-index 172e348..2a33c4f 100644
+index bf7b4af22..bdb285290 100644
 --- a/modules/juce_audio_processors/format_types/juce_VSTPluginFormat.cpp
 +++ b/modules/juce_audio_processors/format_types/juce_VSTPluginFormat.cpp
-@@ -56,9 +56,6 @@ using namespace Vst2;
+@@ -56,9 +56,6 @@ JUCE_BEGIN_IGNORE_WARNINGS_MSVC (4355)
   #ifndef WM_APPCOMMAND
    #define WM_APPCOMMAND 0x0319
   #endif
